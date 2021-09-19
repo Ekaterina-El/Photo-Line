@@ -13,7 +13,8 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/feed_user_avatar_image"
             android:layout_width="@dimen/feed_user_ava_size"
             android:layout_height="@dimen/feed_user_ava_size"
             android:layout_marginEnd="@dimen/feed_user_ava_mr"
@@ -27,6 +28,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/feed_user_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="vlad.topal"
@@ -34,6 +36,7 @@
                 android:textSize="@dimen/normal_text" />
 
             <TextView
+                android:id="@+id/feed_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="17:45 17 августа"
@@ -42,6 +45,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/feed_like_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -54,6 +58,7 @@
                 android:src="@drawable/ic_unlike" />
 
             <TextView
+                android:id="@+id/feed_like_counter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="23"
@@ -63,9 +68,15 @@
     </LinearLayout>
 
     <!--  Content  -->
+
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="415dp"
-        android:src="@drawable/human" />
+        android:id="@+id/feed_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:src="@drawable/photo_loader"
+        android:layout_marginBottom="5dp"
+        />
 
 </LinearLayout>
