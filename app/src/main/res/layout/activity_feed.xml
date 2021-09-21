@@ -8,6 +8,7 @@
     tools:context=".ui.feed.FeedActivity">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:overScrollMode="never"
         android:id="@+id/feed_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
