@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.photoline.R
 import com.example.photoline.data.Post
+import com.example.photoline.utils.downloadImageAndSet
 import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.feed_item.view.*
@@ -36,6 +37,12 @@ class FeedAdapter : RecyclerView.Adapter<FeedAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = posts[position]
+        var userData = getUserById(data.userId)
+
+        if (userData != null) {
+            holder.feedUserImage.downloadImageAndSet(userData.photoUrl)
+            holder.feedUserName.text = userData.name
+        }
 
         holder.feedDate.text = data.time
         holder.feedLikeCounter.text = data.likes.toString()
@@ -43,14 +50,4 @@ class FeedAdapter : RecyclerView.Adapter<FeedAdapter.ViewHolder>() {
     }
 
     override fun getItemCount(): Int = posts.size
-}
-
-private fun ImageView.downloadImageAndSet(url: String) {
-    val uUrl = if (url.isEmpty()) "empty" else url
-    val picasso = Picasso.get()
-    picasso.isLoggingEnabled = true
-    picasso
-        .load(uUrl)
-        .placeholder(R.drawable.photo_loader)
-        .into(this)
 }
