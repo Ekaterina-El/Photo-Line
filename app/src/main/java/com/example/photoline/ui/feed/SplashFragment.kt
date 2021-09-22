@@ -5,6 +5,7 @@ import android.os.CountDownTimer
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.photoline.R
+import com.example.photoline.utils.AppCountTimer
 import com.example.photoline.utils.replaceFragment
 
 class SplashFragment : Fragment(R.layout.fragment_splash) {
