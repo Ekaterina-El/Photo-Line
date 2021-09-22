@@ -1,5 +1,6 @@
 package com.example.photoline.utils
 
+import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.photoline.R
 
@@ -16,5 +17,12 @@ fun replaceFragment(fragment: Fragment, addToBack: Boolean = true) {
             .replace(R.id.fragment_container, fragment)
             .commit()
     }
+}
 
+fun showBottomMenu() {
+    MAIN_ACTIVITY.mButtomMenu.visibility = View.VISIBLE
+}
+
+fun hideBottomMenu() {
+    MAIN_ACTIVITY.mButtomMenu.visibility = View.GONE
 }
