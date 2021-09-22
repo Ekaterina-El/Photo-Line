@@ -7,7 +7,6 @@ import com.squareup.picasso.Picasso
 fun ImageView.downloadImageAndSet(url: String) {
     val uUrl = if (url.isEmpty()) "empty" else url
     val picasso = Picasso.get()
-    picasso.isLoggingEnabled = true
     picasso
         .load(uUrl)
         .placeholder(R.drawable.photo_loader)
