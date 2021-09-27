@@ -10,17 +10,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_height="0dp" />
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/button_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:menu="@menu/button_menu"
-        android:visibility="gone"
-        tools:visibility="visible"
         android:background="@color/second_color"
-        />
+        android:visibility="gone"
+        app:menu="@menu/button_menu"
+        tools:visibility="visible" />
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.photoline.ui.feed
+package com.example.photoline.ui.account
 
 import androidx.fragment.app.Fragment
 import com.example.photoline.R

@@ -1,5 +1,7 @@
 package com.example.photoline.ui.feed
 
+import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,8 +11,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.photoline.R
 import com.example.photoline.data.Post
+import com.example.photoline.data.getUserById
 import com.example.photoline.utils.downloadImageAndSet
-import com.squareup.picasso.Picasso
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.feed_item.view.*
 
@@ -25,6 +27,7 @@ class FeedAdapter : RecyclerView.Adapter<FeedAdapter.ViewHolder>() {
     }
 
     private var posts = mutableListOf<Post>()
+    @SuppressLint("NotifyDataSetChanged")
     fun setPosts(posts: Array<Post>) {
         this.posts = posts.toMutableList()
         notifyDataSetChanged()
@@ -37,11 +40,15 @@ class FeedAdapter : RecyclerView.Adapter<FeedAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = posts[position]
-        var userData = getUserById(data.userId)
+        val userData = getUserById(data.userId)
 
         if (userData != null) {
             holder.feedUserImage.downloadImageAndSet(userData.photoUrl)
             holder.feedUserName.text = userData.name
+        }
+
+        holder.feedLikeBtn.setOnClickListener {
+            Log.d("TAG", "Liked")
         }
 
         holder.feedDate.text = data.time

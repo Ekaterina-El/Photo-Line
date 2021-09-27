@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.photoline.R
+import com.example.photoline.data.posts
 import kotlinx.android.synthetic.main.fragment_feed.*
 
 

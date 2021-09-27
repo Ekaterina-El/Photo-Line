@@ -20,9 +20,9 @@ fun replaceFragment(fragment: Fragment, addToBack: Boolean = true) {
 }
 
 fun showBottomMenu() {
-    MAIN_ACTIVITY.mButtomMenu.visibility = View.VISIBLE
+    MAIN_ACTIVITY.mBottomMenu.visibility = View.VISIBLE
 }
 
 fun hideBottomMenu() {
-    MAIN_ACTIVITY.mButtomMenu.visibility = View.GONE
+    MAIN_ACTIVITY.mBottomMenu.visibility = View.GONE
 }

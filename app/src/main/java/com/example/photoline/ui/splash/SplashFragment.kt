@@ -1,10 +1,10 @@
-package com.example.photoline.ui.feed
+package com.example.photoline.ui.splash
 
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.photoline.R
+import com.example.photoline.ui.feed.FeedFragment
 import com.example.photoline.utils.AppCountTimer
 import com.example.photoline.utils.hideBottomMenu
 import com.example.photoline.utils.replaceFragment

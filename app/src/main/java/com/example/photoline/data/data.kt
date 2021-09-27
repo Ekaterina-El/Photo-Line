@@ -1,9 +1,6 @@
-package com.example.photoline.ui.feed
+package com.example.photoline.data
 
-import com.example.photoline.data.Post
-import com.example.photoline.data.User
-
-val users = arrayListOf<User>(
+val users = arrayListOf(
     User(
         "id1",
         "https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
