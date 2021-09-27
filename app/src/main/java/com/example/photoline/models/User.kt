@@ -1,4 +1,4 @@
-package com.example.photoline.data
+package com.example.photoline.models
 
 data class User(
     var userId: String,

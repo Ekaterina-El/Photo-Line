@@ -10,8 +10,8 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.photoline.R
-import com.example.photoline.data.Post
-import com.example.photoline.data.getUserById
+import com.example.photoline.models.Post
+import com.example.photoline.models.getUserById
 import com.example.photoline.utils.downloadImageAndSet
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.feed_item.view.*

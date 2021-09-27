@@ -2,6 +2,7 @@ package com.example.photoline
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.photoline.database.initFirebase
 import com.example.photoline.ui.account.AccountFragment
 import com.example.photoline.ui.feed.FeedFragment
 import com.example.photoline.ui.splash.SplashFragment
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        initFirebase()
         MAIN_ACTIVITY = this
         initBottomMenu()
 

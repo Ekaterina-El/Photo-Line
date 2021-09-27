@@ -1,4 +1,4 @@
-package com.example.photoline.data
+package com.example.photoline.models
 
 data class Post(
     var postId: String,

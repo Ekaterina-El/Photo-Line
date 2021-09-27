@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "517540464368",
+    "project_id": "photoline-e1e89",
+    "storage_bucket": "photoline-e1e89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517540464368:android:15e4ac586fcbac642ee435",
+        "android_client_info": {
+          "package_name": "com.example.photoline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517540464368-kcesqoe16ch7lg3908qintmg141640p7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.photoline",
+            "certificate_hash": "4350825e8c9dd32d6f5b244e18ae215536fbfaf8"
+          }
+        },
+        {
+          "client_id": "517540464368-2vhcod5d56rdgknfsksved72puu0lbjv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXJWZ9_1YT91bvuDSFR_poQehh2eSuXps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517540464368-2vhcod5d56rdgknfsksved72puu0lbjv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
