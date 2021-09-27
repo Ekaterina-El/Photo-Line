@@ -4,4 +4,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="menu_feed">Feed</string>
     <string name="menu_account">Account</string>
+    <string name="photolinelogo">PhotoLineLogo</string>
+    <string name="hint_login">Логин</string>
+    <string name="hint_pass">Пароль</string>
+    <string name="hint_email">Почта</string>
+    <string name="btn_next">Щелк</string>
 </resources>

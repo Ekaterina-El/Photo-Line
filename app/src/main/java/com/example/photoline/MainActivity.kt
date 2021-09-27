@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.photoline.database.initFirebase
 import com.example.photoline.ui.account.AccountFragment
+import com.example.photoline.ui.auth.LoginFragment
+import com.example.photoline.ui.auth.RegistrationFragment
 import com.example.photoline.ui.feed.FeedFragment
 import com.example.photoline.ui.splash.SplashFragment
 import com.example.photoline.utils.MAIN_ACTIVITY
@@ -22,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         MAIN_ACTIVITY = this
         initBottomMenu()
 
-        replaceFragment(SplashFragment())
+        replaceFragment(LoginFragment())
     }
 
     private fun initBottomMenu() {

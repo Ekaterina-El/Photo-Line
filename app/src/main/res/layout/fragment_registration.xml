@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.RegistrationFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <include
+            android:layout_marginBottom="@dimen/auth_margin"
+            layout="@layout/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_login"
+            style="@style/TextField"
+            android:hint="@string/hint_login"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_email"
+            style="@style/TextFieldWithMT"
+            android:hint="@string/hint_email"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/et_pass"
+            style="@style/TextFieldWithMT"
+            android:autofillHints=""
+            android:hint="@string/hint_pass"
+            android:inputType="textPassword"
+            android:layout_marginBottom="@dimen/auth_margin"
+            />
+        
+        <TextView
+            android:id="@+id/btn_reg_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/normal_text"
+            android:textColor="@color/main_color"
+            android:text="@string/btn_next" />
+    </LinearLayout>
+
+
+</RelativeLayout>
