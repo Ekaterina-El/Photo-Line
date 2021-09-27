@@ -10,8 +10,8 @@ import kotlinx.android.synthetic.main.fragment_feed.*
 
 class FeedFragment : Fragment(R.layout.fragment_feed) {
 
-    lateinit var feedRecyclerView: RecyclerView
-    lateinit var feedRecyclerAdapter: FeedAdapter
+    private lateinit var feedRecyclerView: RecyclerView
+    private lateinit var feedRecyclerAdapter: FeedAdapter
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

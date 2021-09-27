@@ -1,8 +1,9 @@
 package com.example.photoline
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.photoline.ui.feed.AccountFragment
+import com.example.photoline.ui.feed.FeedFragment
 import com.example.photoline.ui.feed.SplashFragment
 import com.example.photoline.utils.MAIN_ACTIVITY
 import com.example.photoline.utils.replaceFragment
@@ -18,6 +19,15 @@ class MainActivity : AppCompatActivity() {
 
         MAIN_ACTIVITY = this
         mButtomMenu = button_menu
+
+        mButtomMenu.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.menu_feed -> replaceFragment(FeedFragment())
+                R.id.menu_account -> replaceFragment(AccountFragment())
+            }
+            true
+        }
+
         replaceFragment(SplashFragment())
     }
 }
