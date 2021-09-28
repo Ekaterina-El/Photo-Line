@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.photoline.R
+import com.example.photoline.database.UID
+import com.example.photoline.ui.auth.RegistrationFragment
 import com.example.photoline.ui.feed.FeedFragment
 import com.example.photoline.utils.AppCountTimer
 import com.example.photoline.utils.hideBottomMenu
@@ -15,7 +17,11 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
         super.onViewCreated(view, savedInstanceState)
 
         val timerChangeReplace = AppCountTimer(3000, 1000, {}) {
-            replaceFragment(FeedFragment(), false)
+            if (UID != "null") {
+                replaceFragment(FeedFragment(), false)
+            } else {
+                replaceFragment(RegistrationFragment(), false)
+            }
         }
         timerChangeReplace.start()
     }

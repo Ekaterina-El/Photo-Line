@@ -9,3 +9,8 @@ lateinit var REF_STORAGE_ROOT: StorageReference
 lateinit var AUTH: FirebaseAuth
 
 lateinit var UID: String
+
+const val NODE_USERS = "users"
+const val CHILD_LOGIN = "login"
+const val CHILD_EMAIL = "email"
+const val CHILD_ID = "id"

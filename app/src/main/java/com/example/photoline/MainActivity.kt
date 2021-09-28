@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         MAIN_ACTIVITY = this
         initBottomMenu()
 
-        replaceFragment(LoginFragment())
+        replaceFragment(SplashFragment())
     }
 
     private fun initBottomMenu() {
