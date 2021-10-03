@@ -8,7 +8,6 @@ import com.example.photoline.database.registrationUser
 import com.example.photoline.utils.hideBottomMenu
 import com.example.photoline.utils.onFailureRegistration
 import com.example.photoline.utils.onSuccessRegistration
-import kotlinx.android.synthetic.main.fragment_login.btn_reg_next
 import kotlinx.android.synthetic.main.fragment_registration.*
 
 class RegistrationFragment : Fragment(R.layout.fragment_registration) {

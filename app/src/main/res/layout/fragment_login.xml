@@ -21,13 +21,13 @@
             android:layout_height="wrap_content" />
 
         <EditText
-            android:id="@+id/et_login"
+            android:id="@+id/login_et_email"
             style="@style/TextField"
-            android:hint="@string/hint_login"
+            android:hint="@string/hint_email"
             android:importantForAutofill="no"
-            android:inputType="text" />
+            android:inputType="textEmailAddress" />
         <EditText
-            android:id="@+id/et_pass"
+            android:id="@+id/login_et_pass"
             style="@style/TextFieldWithMT"
             android:autofillHints=""
             android:hint="@string/hint_pass"
@@ -36,7 +36,7 @@
             />
 
         <TextView
-            android:id="@+id/btn_reg_next"
+            android:id="@+id/btn_login_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="@dimen/normal_text"

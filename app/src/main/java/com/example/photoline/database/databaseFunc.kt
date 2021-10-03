@@ -25,8 +25,19 @@ fun registrationUser(
             onSuccess()
         }
         .addOnFailureListener {
-            onFailure
+            onFailure()
         }
+}
+
+fun loginUser(
+    email: String,
+    password: String,
+    onFailure: () -> Unit,
+    onSuccess: () -> Unit
+) {
+    AUTH.signInWithEmailAndPassword(email, password)
+        .addOnSuccessListener { onSuccess() }
+        .addOnFailureListener { onFailure() }
 }
 
 fun signOut() {
