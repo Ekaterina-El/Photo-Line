@@ -9,4 +9,10 @@
     <string name="hint_pass">Пароль</string>
     <string name="hint_email">Почта</string>
     <string name="btn_next">Щелк</string>
+    <string name="account_new_post">Пост</string>
+    <string name="account_log_int">Войти</string>
+    <string name="account_auth">Зарегистрироваться</string>
+    <string name="account_no_auth">Вы не авторизованы</string>
+    <string name="log_out">Выйти</string>
+    <string name="background_profile_image">Background profile image</string>
 </resources>

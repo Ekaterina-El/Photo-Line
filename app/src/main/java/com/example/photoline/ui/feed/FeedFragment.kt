@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.photoline.R
 import com.example.photoline.models.posts
+import com.example.photoline.utils.showBottomMenu
 import kotlinx.android.synthetic.main.fragment_feed.*
 
 
@@ -23,5 +24,11 @@ class FeedFragment : Fragment(R.layout.fragment_feed) {
         feedRecyclerView.addItemDecoration(FeedRecyclerDecoration(25))
         feedRecyclerView.adapter = feedRecyclerAdapter
         feedRecyclerAdapter.setPosts(posts)
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        showBottomMenu()
     }
 }

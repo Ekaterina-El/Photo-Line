@@ -44,7 +44,7 @@ class FeedAdapter : RecyclerView.Adapter<FeedAdapter.ViewHolder>() {
 
         if (userData != null) {
             holder.feedUserImage.downloadImageAndSet(userData.photoUrl)
-            holder.feedUserName.text = userData.name
+            holder.feedUserName.text = userData.login
         }
 
         holder.feedLikeBtn.setOnClickListener {

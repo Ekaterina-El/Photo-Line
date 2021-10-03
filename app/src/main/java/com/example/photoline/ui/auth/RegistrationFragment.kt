@@ -16,21 +16,23 @@ class RegistrationFragment : Fragment(R.layout.fragment_registration) {
         super.onResume()
         hideBottomMenu()
 
-        btn_reg_next.setOnClickListener {
-            val login = reg_et_login.text.toString().trim()
-            val email = reg_et_email.text.toString().trim()
-            val password = reg_et_pass.text.toString().trim()
-            // TODO: добавить валидацию вводимых данных
+        btn_reg_next.setOnClickListener { startRegistration() }
+    }
 
-            val userData = mutableMapOf<String, Any>()
-            userData[CHILD_LOGIN] = login
-            userData[CHILD_EMAIL] = email
+    private fun startRegistration() {
+        val login = reg_et_login.text.toString().trim()
+        val email = reg_et_email.text.toString().trim()
+        val password = reg_et_pass.text.toString().trim()
+        // TODO: добавить валидацию вводимых данных
 
-            registrationUser(email, password, {
-                onFailureRegistration()
-            }) {
-                onSuccessRegistration(userData)
-            }
+        val userData = mutableMapOf<String, Any>()
+        userData[CHILD_LOGIN] = login
+        userData[CHILD_EMAIL] = email
+
+        registrationUser(email, password, {
+            onFailureRegistration()
+        }) {
+            onSuccessRegistration(userData)
         }
     }
 }
