@@ -12,6 +12,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
 
+// ---- #Firebase -------
 fun initFirebase() {
     AUTH = FirebaseAuth.getInstance()
     REF_DATABASE_ROOT = FirebaseDatabase.getInstance().reference
@@ -20,6 +21,8 @@ fun initFirebase() {
     UID = AUTH.currentUser?.uid.toString()
 }
 
+
+// ---- #Account -------
 fun registrationUser(
     email: String,
     password: String,
@@ -52,28 +55,11 @@ fun signOut() {
     replaceFragment(FeedFragment())
 }
 
+
+// ---- #Users -------
 fun getUserByUID(UID: String, onSuccess: (User) -> Unit) {
     val ref = REF_DATABASE_ROOT.child(NODE_USERS).child(UID).ref
     ref.addListenerForSingleValueEvent(AppValueEventListener {dataSnapshot ->
         onSuccess(dataSnapshot.getUser())
     })
-}
-
-// TODO (вырнестни в отдельный файл)
-class AppValueEventListener(
-    val onError: (DatabaseError) -> Unit = {},
-    val onSuccess: (DataSnapshot) -> Unit
-) : ValueEventListener {
-    override fun onDataChange(snapshot: DataSnapshot) {
-        onSuccess(snapshot)
-    }
-
-    override fun onCancelled(error: DatabaseError) {
-        onError(error)
-    }
-
-}
-// TODO (вырнестни в отдельный файл)
-fun DataSnapshot.getUser(): User {
-    return this.getValue(User::class.java) ?: User()
 }

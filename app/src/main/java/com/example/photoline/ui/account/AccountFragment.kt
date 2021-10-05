@@ -28,32 +28,58 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
 
     private fun caseView() {
         if (UID != NULL) {
-            authorized_profile.visibility = View.VISIBLE
-            unauthorized_profile.visibility = View.GONE
-
-
-            // Get user data
-            getUserByUID(UID) { user ->
-                userData = user
-
-                account_profile_image.downloadImageAndSet(userData.photoUrl)
-                account_profile_login.text = userData.login
-            }
-
-            account_sign_out.setOnClickListener {
-                signOut()
-            }
+            viewProfile()
         } else {
-            authorized_profile.visibility = View.GONE
-            unauthorized_profile.visibility = View.VISIBLE
-
-            account_log_in.setOnClickListener { replaceFragment(LoginFragment(), false) }
-            account_registration.setOnClickListener {
-                replaceFragment(
-                    RegistrationFragment(),
-                    false
-                )
-            }
+            viewUnauthorizedProfile()
         }
+    }
+
+    private fun viewUnauthorizedProfile() {
+        viewLinksForLogin()
+        addListenersForLogin()
+    }
+
+    private fun addListenersForLogin() {
+        account_log_in.setOnClickListener { replaceFragment(LoginFragment(), false) }
+        account_registration.setOnClickListener {
+            replaceFragment(
+                RegistrationFragment(),
+                false
+            )
+        }
+    }
+
+    private fun viewLinksForLogin() {
+        authorized_profile.visibility = View.GONE
+        unauthorized_profile.visibility = View.VISIBLE
+    }
+
+    private fun viewProfile() {
+        viewProfileData()
+        getUserData()
+        addListenerForSignOut()
+    }
+
+    private fun addListenerForSignOut() {
+        account_sign_out.setOnClickListener {
+            signOut()
+        }
+    }
+
+    private fun getUserData() {
+        getUserByUID(UID) { user ->
+            userData = user
+            updateUIAccount()
+        }
+    }
+
+    private fun viewProfileData() {
+        authorized_profile.visibility = View.VISIBLE
+        unauthorized_profile.visibility = View.GONE
+    }
+
+    private fun updateUIAccount() {
+        account_profile_image.downloadImageAndSet(userData.photoUrl)
+        account_profile_login.text = userData.login
     }
 }

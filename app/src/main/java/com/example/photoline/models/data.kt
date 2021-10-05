@@ -1,29 +1,5 @@
 package com.example.photoline.models
 
-val users = arrayListOf(
-    User(
-        "id1",
-        "https://images.unsplash.com/photo-1586287011575-a23134f797f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-        "vasa_na_sene"
-    ),
-    User(
-        "id2",
-        "https://images.unsplash.com/photo-1597225156148-b82b8b4d0c7e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-        "mir.ko"
-    )
-)
-
-// TODO (delete)
-/*
-fun getUserById(id: String): User? {
-    for (user in users) {
-        if (user.uid == id) {
-            return user
-        }
-    }
-    return null
-}*/
-
 var posts = arrayOf(
     Post(
         "id1",
