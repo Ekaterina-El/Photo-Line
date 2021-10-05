@@ -10,8 +10,8 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.photoline.R
+import com.example.photoline.database.getUserByUID
 import com.example.photoline.models.Post
-import com.example.photoline.models.getUserById
 import com.example.photoline.utils.downloadImageAndSet
 import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.android.synthetic.main.feed_item.view.*
@@ -40,20 +40,19 @@ class FeedAdapter : RecyclerView.Adapter<FeedAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = posts[position]
-        val userData = getUserById(data.userId)
+        getUserByUID(data.userId) { userData ->
 
-        if (userData != null) {
             holder.feedUserImage.downloadImageAndSet(userData.photoUrl)
             holder.feedUserName.text = userData.login
-        }
 
-        holder.feedLikeBtn.setOnClickListener {
-            Log.d("TAG", "Liked")
-        }
+            holder.feedLikeBtn.setOnClickListener {
+                Log.d("TAG", "Liked")
+            }
 
-        holder.feedDate.text = data.time
-        holder.feedLikeCounter.text = data.likes.toString()
-        holder.feedImage.downloadImageAndSet(data.photoUrl)
+            holder.feedDate.text = data.time
+            holder.feedLikeCounter.text = data.likes.toString()
+            holder.feedImage.downloadImageAndSet(data.photoUrl)
+        }
     }
 
     override fun getItemCount(): Int = posts.size

@@ -15,4 +15,5 @@
     <string name="account_no_auth">Вы не авторизованы</string>
     <string name="log_out">Выйти</string>
     <string name="background_profile_image">Background profile image</string>
+    <string name="account_status_default">...</string>
 </resources>

@@ -15,13 +15,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
         super.onViewCreated(view, savedInstanceState)
 
         val timerChangeReplace = AppCountTimer(3000, 1000, {}) {
-            /*if (UID != "null") {
-                replaceFragment(FeedFragment(), false)
-            } else {
-                replaceFragment(RegistrationFragment(), false)
-            }*/
             replaceFragment(FeedFragment(), false)
-
         }
         timerChangeReplace.start()
     }

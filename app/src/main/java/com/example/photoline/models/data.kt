@@ -13,14 +13,16 @@ val users = arrayListOf(
     )
 )
 
+// TODO (delete)
+/*
 fun getUserById(id: String): User? {
     for (user in users) {
-        if (user.userId == id) {
+        if (user.uid == id) {
             return user
         }
     }
     return null
-}
+}*/
 
 var posts = arrayOf(
     Post(

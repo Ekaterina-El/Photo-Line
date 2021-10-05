@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:text="Vase_na_Sene"
+                android:text="Loading..."
                 android:textColor="@color/main_color"
                 android:textSize="@dimen/large_text" />
 
@@ -79,7 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Какаой-то аккаунт"
+                android:text="@string/account_status_default"
                 android:textColor="@color/gray"
                 android:textSize="@dimen/normal_text" />
 

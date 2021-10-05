@@ -1,7 +1,8 @@
 package com.example.photoline.models
 
 data class User(
-    var userId: String,
-    var photoUrl: String,
-    var login: String
+    var id: String = "",
+    var photoUrl: String = "",
+    var login: String = "",
+    var status: String = ""
 )
