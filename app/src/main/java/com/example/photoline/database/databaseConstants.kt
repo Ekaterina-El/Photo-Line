@@ -14,8 +14,16 @@ lateinit var AUTH: FirebaseAuth
 lateinit var UID: String
 
 
-// ---- Node Users ----
+// ---- #Node Users ----
 const val NODE_USERS = "users"
 const val CHILD_LOGIN = "login"
 const val CHILD_EMAIL = "email"
 const val CHILD_ID = "id"
+
+// ---- #Node Posts ----
+const val NODE_POSTS = "posts"
+val CHILD_POST_ID = "postId"
+val CHILD_USER_ID = "userId"
+val CHILD_LIKES = "likes"
+val CHILD_TIME = "time"
+val CHILD_PHOTO_URL = "photoUrl"
