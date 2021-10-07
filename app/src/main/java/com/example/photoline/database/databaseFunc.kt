@@ -1,5 +1,6 @@
 package com.example.photoline.database
 
+import android.util.Log
 import com.example.photoline.models.Post
 import com.example.photoline.models.User
 import com.example.photoline.ui.feed.FeedFragment
@@ -7,8 +8,7 @@ import com.example.photoline.utils.NULL
 import com.example.photoline.utils.replaceFragment
 import com.example.photoline.utils.showToast
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ServerValue
+import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 
 // ---- #Firebase -------
@@ -66,6 +66,7 @@ fun getUserByUID(UID: String, onSuccess: (User) -> Unit) {
 
 // ---- #Posts -------
 fun sendPost(post: Post) {
+    // TODO: (Refactoring)
     val postsRef = REF_DATABASE_ROOT.child(NODE_POSTS)
     val postKey = postsRef.push().key!!
 
@@ -84,3 +85,12 @@ fun sendPost(post: Post) {
             showToast("Post send: Error")
         }
 }
+
+fun loadPosts() {
+    val postsRef = REF_DATABASE_ROOT.child(NODE_POSTS)
+
+    postsRef.addChildEventListener(AppChildEventListener { snapshot ->
+        Log.d("LoadPosts: Added", "data: ${snapshot.getValue(Post::class.java)}")
+    })
+}
+

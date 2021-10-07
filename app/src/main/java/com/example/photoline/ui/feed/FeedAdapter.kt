@@ -49,7 +49,9 @@ class FeedAdapter : RecyclerView.Adapter<FeedAdapter.ViewHolder>() {
                 Log.d("TAG", "Liked")
             }
 
-            holder.feedDate.text = data.time
+
+            // TODO (convert time to string)
+            holder.feedDate.text = data.time.toString()
             holder.feedLikeCounter.text = data.likes.toString()
             holder.feedImage.downloadImageAndSet(data.photoUrl)
         }
