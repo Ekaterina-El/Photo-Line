@@ -27,10 +27,10 @@ class FeedAdapter : RecyclerView.Adapter<FeedAdapter.ViewHolder>() {
     }
 
     private var posts = mutableListOf<Post>()
-    @SuppressLint("NotifyDataSetChanged")
-    fun setPosts(posts: Array<Post>) {
-        this.posts = posts.toMutableList()
-        notifyDataSetChanged()
+
+    fun addPost(post: Post) {
+        this.posts.add(post)
+        notifyItemInserted(this.posts.size - 1)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

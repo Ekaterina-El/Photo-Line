@@ -24,13 +24,14 @@ class FeedFragment : Fragment(R.layout.fragment_feed) {
         feedRecyclerView = feed_recycler_view
         feedRecyclerView.addItemDecoration(FeedRecyclerDecoration(25))
         feedRecyclerView.adapter = feedRecyclerAdapter
-        feedRecyclerAdapter.setPosts(posts)
     }
 
     override fun onResume() {
         super.onResume()
 
-        loadPosts()
+        loadPosts { post ->
+            feedRecyclerAdapter.addPost(post)
+        }
         showBottomMenu()
     }
 }

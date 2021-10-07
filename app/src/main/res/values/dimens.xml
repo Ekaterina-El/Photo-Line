@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="feed_item_mh">20dp</dimen>
-    <dimen name="feed_item_mv">4dp</dimen>
+    <dimen name="feed_item_mh">10dp</dimen>
+    <dimen name="feed_item_mv">6dp</dimen>
     <dimen name="feed_user_ava_size">40dp</dimen>
     <dimen name="feed_user_ava_mr">15dp</dimen>
     <dimen name="normal_text">16sp</dimen>

@@ -16,4 +16,5 @@
     <string name="log_out">Выйти</string>
     <string name="background_profile_image">Background profile image</string>
     <string name="account_status_default">...</string>
+    <string name="feed_title">Новости</string>
 </resources>

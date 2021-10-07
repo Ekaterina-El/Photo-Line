@@ -86,11 +86,12 @@ fun sendPost(post: Post) {
         }
 }
 
-fun loadPosts() {
+fun loadPosts(
+    onAdded: (Post) -> Unit
+) {
     val postsRef = REF_DATABASE_ROOT.child(NODE_POSTS)
-
     postsRef.addChildEventListener(AppChildEventListener { snapshot ->
-        Log.d("LoadPosts: Added", "data: ${snapshot.getValue(Post::class.java)}")
+        onAdded(snapshot.getValue(Post::class.java) ?: Post(NULL))
     })
 }
 
